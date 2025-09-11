@@ -33,6 +33,9 @@ const { description, title } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <!-- Preconnect para Google Fonts y recursos externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <ClientRouter />
   </head>
   <body class="bg-primary-50 text-primary-950/90 antialiased transition">
