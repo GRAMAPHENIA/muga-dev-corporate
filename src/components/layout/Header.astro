@@ -1,9 +1,9 @@
 ---
 const links = [
   { ref: '01', name: 'Inicio', href: '/' },
-  { ref: '02', name: 'Sobre nosotros', href: '/about' },
-  { ref: '03', name: 'Precios', href: '/pricing' },
-  { ref: '04', name: 'Contacto', href: '/contact' },
+  { ref: '02', name: 'Sobre nosotros', href: '/sobre-nosotros' },
+  { ref: '03', name: 'Precios', href: '/precios' },
+  { ref: '04', name: 'Contacto', href: '/contacto' },
 ];
 ---
 
@@ -31,13 +31,10 @@ const links = [
 
     <!-- Actions -->
     <div class="-mr-2 flex items-center space-x-2 sm:space-x-3">
-  <!-- ...eliminado botón de cambio de tema... -->
-
-      <!-- Toggle menu -->
       <button
         type="button"
-  class="inline-flex h-14 w-14 items-center justify-center rounded-full text-primary-950 ring-primary-950 transition hover:bg-primary-500/10 focus:outline-none focus-visible:ring-2"
-        onclick="document.getElementById('website-menu').classList.toggle('hidden')"
+        class="inline-flex h-14 w-14 items-center justify-center rounded-full text-primary-950 ring-primary-950 transition hover:bg-primary-500/10 focus:outline-none focus-visible:ring-2"
+        onclick="window.toggleMenu()"
       >
         <span class="sr-only">Toggle menu</span>
         <svg
@@ -54,19 +51,23 @@ const links = [
 
   <!-- Menu content -->
   <div
-    class="mx-auto hidden max-w-2xl px-4 transition-all duration-500 sm:px-6 lg:max-w-7xl lg:px-8"
+    class="mx-auto max-w-2xl px-4 transition-opacity duration-200 opacity-0 sm:px-6 lg:max-w-7xl lg:px-8 hidden"
     id="website-menu"
+    style="pointer-events: none;"
   >
     <div class="grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12">
       <div
-        class="hidden items-center justify-center rounded-3xl bg-primary-500/10 px-6 py-8 lg:flex"
+        class="hidden items-center justify-center rounded-3xl bg-primary-500/10 lg:flex"
+        style="padding:0;"
       >
-        <p
-          class="max-w-sm text-xl italic leading-loose text-primary-950/70"
-        >
-          <span class="font-medium">Muga Start.</span> Especialmente diseñado para sitios
-          web de Negocios, Marketing, SaaS y Startups.
-        </p>
+        <div class="w-full h-full">
+          <img
+            src="/cabins/img-nav.webp"
+            alt="Cabañas Patagonia"
+            class="rounded-2xl w-full h-full object-cover"
+            style="aspect-ratio: 16/9;"
+          />
+        </div>
       </div>
 
       <!-- Navigation -->
@@ -98,3 +99,29 @@ const links = [
     </div>
   </div>
 </header>
+  <script>
+  declare global {
+    interface Window {
+      toggleMenu: () => void;
+    }
+  }
+  window.toggleMenu = function () {
+    const menu = document.getElementById('website-menu');
+    if (!menu) return;
+    if (!menu.classList.contains('hidden')) {
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+      setTimeout(() => {
+        menu.classList.add('hidden');
+      }, 200);
+    } else {
+      menu.classList.remove('hidden');
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+      setTimeout(() => {
+        menu.style.opacity = '1';
+        menu.style.pointerEvents = 'auto';
+      }, 10);
+    }
+  }
+  </script>

@@ -2,38 +2,38 @@
 const questions = [
   {
     id: 'faq-1',
-    title: '¿Qué incluye cada plan?',
+    title: '¿Qué incluye el alquiler de la cabaña?',
     answer:
-      'Todos los planes ofrecen acceso completo a nuestras herramientas, soporte personalizado y actualizaciones periódicas.',
+      'Todas nuestras cabañas incluyen cocina equipada, ropa de cama, WiFi y estacionamiento. Algunas opciones ofrecen jacuzzi y desayuno.',
   },
   {
     id: 'faq-2',
-    title: '¿Puedo cambiar de plan?',
+    title: '¿Se pueden realizar reservas para grupos grandes?',
     answer:
-      'Sí, puedes modificar tu plan en cualquier momento según las necesidades de tu empresa.',
+      'Sí, contamos con cabañas de diferentes capacidades y opciones para grupos familiares o de amigos.',
   },
   {
     id: 'faq-3',
-    title: '¿Ofrecen soporte técnico?',
+    title: '¿Qué actividades se pueden realizar cerca?',
     answer:
-      'Nuestro equipo está disponible para ayudarte y resolver cualquier consulta técnica o funcional.',
+      'Ofrecemos actividades guiadas como trekking, pesca, paseos en kayak y excursiones a parques nacionales.',
   },
   {
     id: 'faq-4',
     title: '¿Cómo se realiza el pago?',
-    answer: 'Puedes abonar mediante transferencia bancaria, tarjeta de crédito o débito.',
+    answer: 'Podés abonar mediante transferencia bancaria, tarjeta de crédito o débito.',
   },
   {
     id: 'faq-5',
-    title: '¿Hay descuentos por volumen?',
+    title: '¿Hay descuentos por estancias prolongadas?',
     answer:
-      'Sí, ofrecemos precios especiales para empresas que contraten múltiples servicios o licencias.',
+      'Sí, ofrecemos ofertas especiales para quienes reservan por más de una semana.',
   },
   {
     id: 'faq-6',
-    title: '¿Cómo solicito soporte?',
+    title: '¿Cómo solicito asistencia durante la estadía?',
     answer:
-      'Puedes contactarnos por correo electrónico o a través de nuestro formulario de contacto.',
+      'Nuestro equipo está disponible para ayudarte en todo momento. Podés contactarnos por WhatsApp, teléfono o email.',
   },
 ];
 ---
@@ -66,7 +66,7 @@ const questions = [
                         dd.classList.add('faq-open');
                         dd.style.maxHeight = dd.scrollHeight + 'px';
                         dd.style.opacity = '1';
-                        item.style.background = '#404040';
+                        item.style.background = 'rgba(255,255,255,0.8)';
                         chevron.style.transform = 'rotate(180deg)';
                         chevron.style.transition = 'transform 0.3s ease';
                         this.setAttribute('aria-expanded', 'true');
@@ -81,7 +81,7 @@ const questions = [
                       }
                     `}
                   >
-                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950">
+                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 ">
                       <span class="font-medium">{question.title}</span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg
@@ -104,7 +104,7 @@ const questions = [
                   id={question.id}
                   style="max-height:0; opacity:0; overflow:hidden; transition:max-height 0.3s ease, opacity 0.3s ease;"
                 >
-                  <p class="text-base text-primary-950/70">{question.answer}</p>
+                  <p class="text-base text-primary-950">{question.answer}</p>
                 </dd>
               </div>
             ))
