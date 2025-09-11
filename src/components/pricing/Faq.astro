@@ -26,8 +26,7 @@ const questions = [
   {
     id: 'faq-5',
     title: '¿Hay descuentos por estancias prolongadas?',
-    answer:
-      'Sí, ofrecemos ofertas especiales para quienes reservan por más de una semana.',
+    answer: 'Sí, ofrecemos ofertas especiales para quienes reservan por más de una semana.',
   },
   {
     id: 'faq-6',
@@ -51,7 +50,7 @@ const questions = [
           {
             questions.map((question, index) => (
               <div class="rounded-3xl px-4 transition" id={`faq-item-${index}`}>
-                <dt class=" text-lg transition">
+                <dt class="text-lg transition">
                   <button
                     type="button"
                     class="group block w-full py-6 text-left transition focus-visible:outline-none"
@@ -81,7 +80,7 @@ const questions = [
                       }
                     `}
                   >
-                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 ">
+                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950">
                       <span class="font-medium">{question.title}</span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg

@@ -2,7 +2,7 @@
 
 declare global {
   interface Window {
-  // ...existing code...
+    // ...existing code...
   }
 }
 

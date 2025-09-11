@@ -17,7 +17,9 @@ const { description, title } = Astro.props;
 <html lang="es">
   <head>
     <style is:global>
-      [x-cloak] { display: none !important; }
+      [x-cloak] {
+        display: none !important;
+      }
       @font-face {
         font-family: 'Asimovian';
         src: url('/fonts/Asimovian/Asimovian-Regular.ttf') format('truetype');
@@ -32,9 +34,7 @@ const { description, title } = Astro.props;
     <title>{title}</title>
     <ClientRouter />
   </head>
-  <body
-  class="bg-primary-50 text-primary-950/90 antialiased transition"
-  >
+  <body class="bg-primary-50 text-primary-950/90 antialiased transition">
     <Header />
     <main>
       <slot />
