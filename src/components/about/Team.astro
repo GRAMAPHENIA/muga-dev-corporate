@@ -32,7 +32,17 @@ const team = [
           team.map((item) => (
             <li class="border-primary-900/10 rounded-3xl border px-6 py-8">
               <div class="space-y-6">
-                <img class="mx-auto h-40 w-full object-cover rounded-3xl" src={item.image} alt={item.name} />
+                <img
+                  class="mx-auto h-40 w-full object-cover rounded-3xl"
+                  src={item.image.replace('.webp', '-800.webp')}
+                  srcset={`
+                    ${item.image.replace('.webp', '-400.webp')} 400w,
+                    ${item.image.replace('.webp', '-800.webp')} 800w,
+                    ${item.image.replace('.webp', '-1520.webp')} 1520w
+                  `}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
+                  alt={item.name}
+                />
                 <div class="text-center">
                   <h3 class="text-lg font-medium">{item.name}</h3>
                   <p class="text-primary-950/70 text-base">{item.job}</p>
