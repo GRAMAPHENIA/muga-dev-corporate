@@ -1,2 +1,8 @@
-/* Asimovian font import from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Asimovian:wght@400;700&display=swap');
+/* Asimovian font local */
+@font-face {
+	font-family: 'Asimovian';
+	src: url('/fonts/Asimovian/Asimovian-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
