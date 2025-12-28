@@ -1,46 +1,38 @@
-# Plantilla Corporativa Astro
+# muga-dev-corporate
 
-Base profesional para sitios web de empresas, startups y SaaS, optimizada en diseño, accesibilidad y velocidad.
+**Estado:** 🟢 Activo
 
----
+Producto de MUGA.dev para sitios corporativos claros, sobrios y sostenibles,
+pensados para comunicar estructura, confianza y continuidad.
 
-## 🚀 Beneficios
+## Qué es
+Un modelo de sitio corporativo reutilizable.
+Prioriza claridad institucional, jerarquía de información y mantenimiento a largo plazo.
 
-- Diseño moderno y adaptable
-- Estructura pensada para negocios digitales
-- Tecnologías líderes: **Astro** y **Tailwind CSS**
-- Rapidez, rendimiento y SEO
-- Modo oscuro y claro
-- Código limpio y mantenible
+No es un template visual: es una base estructural profesional.
 
----
+## Para qué sirve
+- Sitios institucionales de empresas o estudios.
+- Presentación clara de servicios, visión y contacto.
+- Base sólida para crecer sin rehacer el sitio.
 
-## 📦 Contenido
+## Público objetivo
+- Empresas y estudios que necesitan presencia institucional seria.
+- Proyectos de MUGA.dev orientados a largo plazo.
+- Colaboradores que trabajan sobre una base común.
 
-- Páginas y secciones prediseñadas
-- Plantillas listas para productos, servicios y contacto
+## Características
+- Arquitectura clara y legible.
+- Diseño sobrio y contenido primero.
+- Estructura preparada para escalar secciones.
+- Mantenimiento simple y predecible.
 
----
+## Stack
+- Astro
+- CSS moderno
+- HTML semántico
 
-## ⚡ Instalación
-
+## Desarrollo local
 ```bash
-pnpm install
-pnpm run dev
-```
-
----
-
-## 📂 Estructura
-
-- `public/` – Recursos estáticos
-- `src/` – Código fuente (componentes, layouts, páginas)
-- Configuración: Astro, Tailwind, TypeScript, Prettier
-
----
-
-## 🌐 Despliegue
-
-Listo para producción en Vercel, Netlify o servidores propios.
-
----
+npm install
+npm run dev
